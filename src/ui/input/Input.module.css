@@ -1,0 +1,49 @@
+.input {
+  width: 100%;
+  height: 3.2rem;
+  margin: 1rem 0;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  color: #fff;
+  padding: 0.5rem;
+  background-color: #292929;
+}
+
+.invalid {
+  border: 1px solid #ff0000;
+}
+.input::placeholder {
+  color: #7c7c7c;
+  font-size: 1.25rem;
+}
+.error {
+  color: #ff0000;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.share {
+  margin: 1rem 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.5rem;
+}
+.share ~ label {
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  color: #7c7c7c;
+  line-height: 1.6;
+  font-family: "Dm Sans";
+}

@@ -1,0 +1,24 @@
+.registerForm {
+  flex-grow: 1;
+  min-width: 62rem;
+  background-color: #000;
+}
+.container {
+  width: 31rem;
+  margin: 3rem auto;
+}
+.head {
+  color: #72db73;
+  text-align: center;
+  font-family: "Single Day", cursive;
+  font-size: 4.2rem;
+  font-weight: 400;
+}
+
+.para {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-family: "Dm Sans";
+}
