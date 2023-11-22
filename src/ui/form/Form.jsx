@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Input from "../input/Input";
 import { useState } from "react";
 import formCss from "./Form.module.css";
 import FormFooter from "./FormFooter";
+import { json, useNavigate } from "react-router-dom";
 const Form = () => {
   const [values, setValues] = useState({
     Name: "",
@@ -26,6 +27,14 @@ const Form = () => {
     Mobile: "number",
     Share: "checkbox",
   };
+  useEffect(() => {
+    if (localStorage.getItem("formValues")) {
+      navigate("/select-category");
+    } else {
+      return;
+    }
+  }, []);
+  const navigate = useNavigate();
   function handleChange(e) {
     if (e.target.type !== "checkbox") {
       setValues({ ...values, [e.target.placeholder]: e.target.value });
@@ -68,8 +77,14 @@ const Form = () => {
         return { ...prev, Share: true };
       });
     }
+    if (fields.filter((field) => !values[field]).length > 0) {
+      return;
+    } else {
+      localStorage.setItem("formValues", JSON.stringify(values));
+      navigate("/select-category");
+    }
   }
-  console.log(error);
+
   return (
     <form className={formCss.form} onSubmit={handleSubmit}>
       {fields.map((field) => {

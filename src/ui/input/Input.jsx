@@ -2,9 +2,7 @@ import React from "react";
 import inputCss from "./Input.module.css";
 const Input = (props) => {
   const { error, errorMessage, children, handleChange, ...attribute } = props;
-  if (attribute.type === "checkbox") {
-    console.log(attribute);
-  }
+
   if (attribute.type !== "checkbox") {
     return (
       <>
