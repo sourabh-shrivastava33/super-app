@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import cardCss from "./Card.module.css";
-import { getGenre, setGenreToLocalStorage } from "../../utils/helper";
+import { getGenre } from "../../utils/helper";
 import { useGenre } from "../../hooks/GenreProvider";
 const Card = ({ name, image, color }) => {
   const { setGenre, genre: genreArr } = useGenre();
