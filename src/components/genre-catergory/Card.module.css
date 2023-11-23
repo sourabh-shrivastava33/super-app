@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  border-radius: 15px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+  width: 14rem;
+  height: 14rem;
+  padding: 1.5rem 0.6rem 1.4rem;
+}
+
+.selected {
+  box-shadow: 0 0 0 5px green;
+}

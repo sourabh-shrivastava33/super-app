@@ -1,0 +1,12 @@
+.genreComponent {
+  display: grid;
+  padding: 0.6rem 1rem;
+  justify-items: center;
+  justify-content: center;
+  align-content: end;
+  grid-template-columns: repeat(3, 15rem);
+  grid-template-rows: repeat(3, 15rem);
+  row-gap: 0.8rem;
+  column-gap: 0.8rem;
+  margin-top: 2.4rem;
+}

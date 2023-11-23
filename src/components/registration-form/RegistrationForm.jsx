@@ -1,6 +1,6 @@
 import React from "react";
 import registrationFormCss from "./RegistrationForm.module.css";
-import Form from "../../ui/form/Form";
+import Form from "../form/Form";
 const RegistrationForm = () => {
   return (
     <div className={registrationFormCss.registerForm}>

@@ -3,7 +3,7 @@ import Input from "../input/Input";
 import { useState } from "react";
 import formCss from "./Form.module.css";
 import FormFooter from "./FormFooter";
-import { json, useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 const Form = () => {
   const [values, setValues] = useState({
     Name: "",
@@ -19,6 +19,7 @@ const Form = () => {
     Mobile: false,
     Share: false,
   });
+  const navigate = useNavigate();
   const fields = Object.keys(values);
   const types = {
     Name: "text",
@@ -29,12 +30,12 @@ const Form = () => {
   };
   useEffect(() => {
     if (localStorage.getItem("formValues")) {
-      navigate("/select-category");
+      navigate("/genre", { replace: true });
     } else {
       return;
     }
   }, []);
-  const navigate = useNavigate();
+
   function handleChange(e) {
     if (e.target.type !== "checkbox") {
       setValues({ ...values, [e.target.placeholder]: e.target.value });
@@ -81,7 +82,7 @@ const Form = () => {
       return;
     } else {
       localStorage.setItem("formValues", JSON.stringify(values));
-      navigate("/select-category");
+      navigate("/genre", { replace: true });
     }
   }
 

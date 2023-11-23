@@ -1,0 +1,19 @@
+.category {
+  flex-grow: 1;
+  min-width: 60rem;
+  background-color: #000;
+}
+
+.next {
+  margin: 1.2rem 7.2rem;
+  text-align: end;
+}
+.next > button {
+  padding: 0.7rem 2.8rem;
+  background-color: #148a08;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+}
