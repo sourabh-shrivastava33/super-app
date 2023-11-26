@@ -1,0 +1,6 @@
+.notes {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  border-radius: 20px;
+  border: 2px solid yellowgreen;
+}

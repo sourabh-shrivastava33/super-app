@@ -1,0 +1,6 @@
+.timerComponent {
+  flex-grow: 0.35;
+  border-radius: 20px;
+  min-height: 16.875rem;
+  border: 1px solid purple;
+}

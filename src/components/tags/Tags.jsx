@@ -1,7 +1,7 @@
 import React from "react";
 import tagsCss from "./Tags.module.css";
 import { useGenre } from "../../hooks/GenreProvider";
-const Tags = ({ name }) => {
+const Tags = ({ name, type }) => {
   const { setGenre, genre } = useGenre();
   function handleDelete(e) {
     const newGenres = [...genre].filter(
@@ -10,14 +10,23 @@ const Tags = ({ name }) => {
     localStorage.setItem("genre", JSON.stringify(newGenres));
     setGenre(newGenres);
   }
-  return (
-    <p className={tagsCss.tags} id={name}>
-      <span>{name}</span>
-      <span className={tagsCss.delete} onClick={handleDelete}>
-        X
-      </span>
-    </p>
-  );
+  if (type === "select") {
+    return (
+      <p className={tagsCss.tags} id={name}>
+        <span>{name}</span>
+        <span className={tagsCss.delete} onClick={handleDelete}>
+          X
+        </span>
+      </p>
+    );
+  }
+  if (type === "selected") {
+    return (
+      <p className={tagsCss.select} id={name}>
+        {name}
+      </p>
+    );
+  }
 };
 
 export default Tags;

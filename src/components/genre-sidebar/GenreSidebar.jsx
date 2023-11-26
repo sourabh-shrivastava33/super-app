@@ -1,6 +1,7 @@
 import React from "react";
 import sidebarCss from "./GenreSidebar.module.css";
 import GenreTagContainer from "./GenreTagContainer";
+import { useGenre } from "../../hooks/GenreProvider";
 const warning = {
   icon: (
     <svg
@@ -19,15 +20,14 @@ const warning = {
   ),
 };
 const GenreSidebar = () => {
-  console.log(warning);
-  let selected = false;
-  console.log(selected);
+  const { validGenreLength } = useGenre();
+
   return (
     <div className={sidebarCss.sidebar}>
       <h1 className={sidebarCss.head1}>Super app</h1>
       <h2 className={sidebarCss.head2}>Choose your entertainment category</h2>
       <GenreTagContainer />
-      {selected ? (
+      {!validGenreLength ? (
         <p className={sidebarCss.warning}>
           <span>{warning.icon}</span>{" "}
           <span>Minimum three category required</span>

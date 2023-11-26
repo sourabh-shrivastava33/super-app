@@ -7,7 +7,7 @@ const GenreContainer = () => {
   return (
     <div className={genreContainerCss.container}>
       {genre.map((genre) => (
-        <Tags name={genre.name} key={genre.id} />
+        <Tags name={genre.name} key={genre.id} type="select" />
       ))}
     </div>
   );

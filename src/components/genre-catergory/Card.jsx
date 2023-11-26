@@ -3,7 +3,12 @@ import cardCss from "./Card.module.css";
 import { getGenre } from "../../utils/helper";
 import { useGenre } from "../../hooks/GenreProvider";
 const Card = ({ name, image, color }) => {
-  const { setGenre, genre: genreArr } = useGenre();
+  const {
+    setGenre,
+    genre: genreArr,
+    validGenreLength,
+    setValidGenreLength,
+  } = useGenre();
 
   function handleClick(e) {
     const genre = getGenre(e);
@@ -18,6 +23,9 @@ const Card = ({ name, image, color }) => {
         ];
       }
       localStorage.setItem("genre", JSON.stringify(newGenres));
+      if (newGenres.length >= 3 && !validGenreLength) {
+        setValidGenreLength(true);
+      }
       return newGenres;
     });
   }

@@ -1,0 +1,33 @@
+.profileCont {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5746ea;
+  font-family: "Roboto";
+  color: #ffffff;
+  grid-row: 1/3;
+  grid-column: 1/2;
+  border-radius: 20px;
+
+  padding: 1rem 2rem;
+}
+.profileImg {
+  height: 16rem;
+}
+.details {
+  flex-grow: 0.7;
+  min-width: 70%;
+  padding: 0.8rem 2rem;
+}
+
+.name,
+.email {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+}
+
+.username {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}

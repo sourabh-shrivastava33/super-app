@@ -1,0 +1,55 @@
+.news,
+.loading {
+  position: relative;
+  font-family: "Roboto";
+  flex-basis: 25%;
+  height: 100%;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  max-width: 26.75rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.news > img {
+  width: 100%;
+  height: 65%;
+}
+
+.head {
+  position: absolute;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.4rem;
+  top: 45%;
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+  height: 20%;
+  background-color: #000000bd;
+}
+
+.details {
+  height: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.dateTime {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+
+  gap: 1rem;
+}

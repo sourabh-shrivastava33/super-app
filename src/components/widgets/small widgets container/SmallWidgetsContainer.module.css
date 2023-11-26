@@ -1,0 +1,8 @@
+.smallWidgetesCont {
+  display: grid;
+  grid-template-columns: 55% 42%;
+  grid-template-rows: 26% 26% 40%;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-grow: 0.6;
+}

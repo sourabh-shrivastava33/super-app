@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Input from "../input/Input";
 import { useState } from "react";
 import formCss from "./Form.module.css";
 import FormFooter from "./FormFooter";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Form = () => {
   const [values, setValues] = useState({
     Name: "",
@@ -28,13 +28,6 @@ const Form = () => {
     Mobile: "number",
     Share: "checkbox",
   };
-  useEffect(() => {
-    if (localStorage.getItem("formValues")) {
-      navigate("/genre", { replace: true });
-    } else {
-      return;
-    }
-  }, []);
 
   function handleChange(e) {
     if (e.target.type !== "checkbox") {

@@ -1,0 +1,20 @@
+.selectedCont {
+  max-width: 24rem;
+  max-height: 6rem;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  row-gap: 1rem;
+}
+
+.selectedCont::-webkit-scrollbar {
+  background-color: #5746ea;
+  width: 10px;
+  border-radius: 20px;
+}
+.selectedCont::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+
+  border-radius: 20px;
+}
