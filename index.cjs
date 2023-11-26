@@ -1,4 +1,5 @@
 const express = require("express");
+const axios = require("axios");
 const PORT = 3000;
 require("dotenv").config();
 const cors = require("cors");
@@ -8,12 +9,11 @@ app.use(cors());
 app.get("/news", async (req, res) => {
   const newsBaseUrl = "https://newsapi.org/v2";
   try {
-    const data = await fetch(
+    const data = await axios(
       `${newsBaseUrl}/everything?q=tech&apiKey=${process.env.VITE_NEWS_API_KEY}`
     );
-    const resp = await data.json();
 
-    res.json(resp);
+    res.json(data.data);
   } catch (error) {
     console.log(error);
   }
