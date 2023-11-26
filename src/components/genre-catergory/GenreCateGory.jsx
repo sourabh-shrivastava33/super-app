@@ -11,7 +11,7 @@ const GenreCateGory = () => {
       setValidGenreLength(false);
     } else {
       setValidGenreLength(true);
-      navigate("/home");
+      navigate("/");
     }
   }
 

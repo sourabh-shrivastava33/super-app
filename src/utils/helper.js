@@ -10,7 +10,6 @@ export function randomNum() {
 }
 
 export function GetTimeData(type = "date") {
-  console.log("called");
   const date = new Date();
   if (type === "date") {
     return new Intl.DateTimeFormat("en-In", {

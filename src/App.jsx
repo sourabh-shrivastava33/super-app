@@ -4,6 +4,7 @@ import SelectCategory from "./pages/select-category/SelectCategory";
 import GenreProvider from "./hooks/GenreProvider";
 import { useEffect } from "react";
 import HomePage from "./pages/home-page/HomePage";
+import HomePageAuth from "./components/HomePageAuth";
 
 function App() {
   // useEffect(() => {
@@ -31,10 +32,17 @@ function App() {
     <BrowserRouter>
       <GenreProvider>
         <Routes>
-          <Route path="/" element={<Navigate to="/register" />} replace />
+          {/* <Route path="/" element={<Navigate to="/register" />} replace /> */}
           <Route path="/register" element={<Registration />} />
           <Route path="/genre" element={<SelectCategory />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route
+            path="/"
+            element={
+              <HomePageAuth>
+                <HomePage />
+              </HomePageAuth>
+            }
+          />
         </Routes>
       </GenreProvider>
     </BrowserRouter>

@@ -8,12 +8,12 @@ import { useWeatherApi } from "../../../hooks/useWeatherApi";
 import { GetTimeData } from "../../../utils/helper";
 const Weather = () => {
   const { weather, loading } = useWeatherApi();
-  const { location, current } = weather;
+  const current = weather?.current;
   const [time, setTime] = useState(() => {
     return GetTimeData("time");
   });
   const date = GetTimeData().replaceAll("/", "-");
-
+  console.log(loading);
   useEffect(() => {
     const id = setInterval(() => {
       setTime(GetTimeData("time"));

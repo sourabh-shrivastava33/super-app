@@ -2,5 +2,40 @@
   grid-column: 2/-1;
   grid-row: 1/-1;
   border-radius: 20px;
-  border: 2px solid yellowgreen;
+  font-family: "Roboto";
+  overflow: hidden;
+  padding: 0 1rem;
+  background-color: #f1c75b;
+}
+
+.head {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 2rem 3rem 1rem;
+}
+.textArea {
+  width: 100%;
+  height: 78.8%;
+  background-color: #f1c75b;
+  border: none;
+  padding: 1rem 3rem;
+  border-style: none;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  resize: none;
+}
+.textArea:focus {
+  outline: none;
+  border: none;
+}
+.textArea::-webkit-scrollbar {
+  background-color: #f1c75b;
+  width: 10px;
+  border-radius: 20px;
+}
+.textArea::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.539);
+  cursor: pointer;
+  border-radius: 20px;
 }
