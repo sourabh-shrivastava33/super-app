@@ -10,8 +10,8 @@ export function useNewsApi() {
       setLoading(true);
       const data = await fetchNewsData({ signal: abortController.signal });
 
-      setNews(data);
       setLoading(false);
+      setNews(data);
     }
     getData();
     return () => abortController.abort();

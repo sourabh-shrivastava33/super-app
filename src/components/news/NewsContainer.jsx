@@ -3,9 +3,10 @@ import newsCss from "./NewsContainer.module.css";
 
 import { useNewsApi } from "../../hooks/useNewsApi";
 import { GetTimeData, randomNum } from "../../utils/helper";
-const random = randomNum();
+
 const NewsContainer = () => {
   const { news, loading } = useNewsApi();
+  const [randomNumber, setRandomNumber] = useState(randomNum());
   const [time, setTime] = useState(() => {
     return GetTimeData("time");
   });
@@ -17,8 +18,12 @@ const NewsContainer = () => {
     }, 1000);
     return () => clearInterval(id);
   }, []);
+  useEffect(() => {
+    const id = setInterval(() => setRandomNumber(randomNum()), 30000);
+    return () => clearInterval(id);
+  }, [randomNum]);
 
-  const randNews = news?.articles?.[random];
+  const randNews = news?.articles?.[randomNumber];
 
   const content = randNews?.content.split("[")[0];
   if (loading) {

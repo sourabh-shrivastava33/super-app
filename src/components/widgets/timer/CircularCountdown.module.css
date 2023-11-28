@@ -1,0 +1,26 @@
+.timerWrapper {
+  display: flex;
+  justify-content: center;
+
+  background: #191e39;
+  box-shadow: 0px 6px 26px 0px rgba(0, 0, 0, 0.61) inset,
+    -3px -7px 16px 0px rgba(95, 88, 88, 0.23);
+  align-items: center;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+}
+
+.circularCountdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0.3;
+}
+
+.value {
+  font-family: "Roboto";
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+}

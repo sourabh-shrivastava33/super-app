@@ -13,8 +13,8 @@ export function useWeatherApi() {
       const data = await fetchWeatherDataMemoized({
         signal: abortController.signal,
       });
-      setWeather(data);
       setLoading(false);
+      setWeather(data);
     }
     getData();
     return () => abortController.abort();

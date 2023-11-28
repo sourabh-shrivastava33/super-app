@@ -13,6 +13,7 @@ const Notes = () => {
     <div className={notesCss.notes}>
       <div className={notesCss.head}>All notes</div>
       <textarea
+        name="notes"
         value={note}
         className={notesCss.textArea}
         onChange={handleNoteChange}

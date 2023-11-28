@@ -13,7 +13,7 @@ const Weather = () => {
     return GetTimeData("time");
   });
   const date = GetTimeData().replaceAll("/", "-");
-  console.log(loading);
+
   useEffect(() => {
     const id = setInterval(() => {
       setTime(GetTimeData("time"));
