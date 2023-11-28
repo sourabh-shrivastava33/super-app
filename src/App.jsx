@@ -4,7 +4,7 @@ import SelectCategory from "./pages/select-category/SelectCategory";
 import GenreProvider from "./hooks/GenreProvider";
 import HomePage from "./pages/home-page/HomePage";
 import HomePageAuth from "./components/AuthComponent/HomePageAuth";
-
+// https://image.tmdb.org/t/p/w500
 function App() {
   return (
     <BrowserRouter>

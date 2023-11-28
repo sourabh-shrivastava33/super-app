@@ -81,6 +81,7 @@ const Timer = () => {
         setMinutes={setMinutes}
         setSeconds={setSeconds}
       />
+
       <TimerController
         hours={hours}
         seconds={seconds}
