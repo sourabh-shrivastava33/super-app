@@ -30,7 +30,7 @@ app.get("/weather", async (req, res) => {
     res.json({ err: error });
   }
 });
-app.get("/genre", async (req, res) => {
+app.get("/genre", cors(), async (req, res) => {
   try {
     const { g, p = 1 } = req.query;
 

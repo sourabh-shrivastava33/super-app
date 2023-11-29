@@ -1,0 +1,36 @@
+.body {
+  max-width: 114rem;
+  height: 87%;
+  margin: 0 auto;
+}
+.heading {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 500;
+}
+.posterRow {
+  height: 41.5rem;
+  margin-top: 1rem;
+  overflow-y: scroll;
+  padding: 0 3rem;
+}
+.posterRow::-webkit-scrollbar {
+  background-color: #000;
+}
+.posterRow::-webkit-scrollbar-thumb {
+  background-color: #6f6767;
+  border-radius: 100px;
+}
+.buttonContainer {
+  text-align: end;
+  margin-top: 2rem;
+}
+.button {
+  width: 9rem;
+  height: 2rem;
+  border-radius: 100px;
+  background-color: #148a08;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}

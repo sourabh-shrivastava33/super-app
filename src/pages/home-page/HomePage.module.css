@@ -14,3 +14,17 @@
   height: 90%;
   justify-content: space-between;
 }
+
+.browseButtonContainer {
+  margin-top: 2rem;
+  text-align: end;
+}
+.browseButtonContainer > button {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 100px;
+  background-color: #148a08;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+}

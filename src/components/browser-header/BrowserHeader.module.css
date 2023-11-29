@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 3rem;
+  align-self: flex-start;
+  font-family: "Single day";
+  color: #72db73;
+}

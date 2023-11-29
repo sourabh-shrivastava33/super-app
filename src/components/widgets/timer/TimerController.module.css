@@ -46,9 +46,9 @@
   border: none;
   font-size: 1.2rem;
   color: #ffffff;
-  /* padding: 4rem 36rem; */
   width: 37rem;
   height: 2.5rem;
   border-radius: 90000px;
   background-color: #ff6a6a;
+  cursor: pointer;
 }
