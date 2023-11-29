@@ -44,9 +44,7 @@ const Form = () => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(values.Name);
     if (!values.Name) {
-      console.log("hello");
       setError((prev) => {
         return { ...prev, Name: true };
       });

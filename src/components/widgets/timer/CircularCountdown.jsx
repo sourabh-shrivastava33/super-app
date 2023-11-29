@@ -18,7 +18,6 @@ const renderTime = ({ remainingTime }) => {
   if (remainingTime === 0) {
     return <div className={countdownTimerCss.value}>00:00:00</div>;
   }
-  console.log(hours, seconds, minutes);
 
   return (
     <div className="timer">

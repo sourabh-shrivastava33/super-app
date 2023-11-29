@@ -8,7 +8,6 @@ const HomePageAuth = ({ children }) => {
     JSON.parse(localStorage.getItem("genre")).length !== 0
       ? true
       : false;
-  console.log(genreSelected);
   return signedUp ? (
     genreSelected ? (
       children
