@@ -4,7 +4,7 @@ const PORT = 3000;
 require("dotenv").config();
 const cors = require("cors");
 const app = express();
-app.use(cors({ origin: "https://super-app-six.vercel.app/" }));
+app.use(cors());
 
 app.get("/news", async (req, res) => {
   try {
