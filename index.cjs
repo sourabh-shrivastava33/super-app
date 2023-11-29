@@ -4,7 +4,7 @@ const PORT = 3000;
 require("dotenv").config();
 const cors = require("cors");
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://super-app-six.vercel.app/" }));
 
 app.get("/news", async (req, res) => {
   try {
@@ -30,7 +30,7 @@ app.get("/weather", async (req, res) => {
     res.json({ err: error });
   }
 });
-app.get("/genre", cors(), async (req, res) => {
+app.get("/genre", async (req, res) => {
   try {
     const { g, p = 1 } = req.query;
 

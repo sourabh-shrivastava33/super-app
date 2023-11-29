@@ -54,6 +54,10 @@ h1 {
   margin-top: 40px;
 }
 
+button {
+  border: none;
+}
+
 .circle {
   width: 2rem;
   height: 2rem;

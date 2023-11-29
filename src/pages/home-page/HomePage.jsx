@@ -14,7 +14,9 @@ const HomePage = () => {
           <NewsContainer />
         </div>
         <div className={homePageCss.browseButtonContainer}>
-          <button onClick={() => navigate("/browse")}>Browse</button>
+          <button onClick={() => navigate("/browse", { replace: true })}>
+            Browse
+          </button>
         </div>
       </div>
     </div>
