@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Registration from "./pages/registration/Registration";
 import SelectCategory from "./pages/select-category/SelectCategory";
 import GenreProvider from "./hooks/GenreProvider";
 import HomePage from "./pages/home-page/HomePage";
-import HomePageAuth from "./components/AuthComponent/HomePageAuth";
+import PageAuth from "./components/AuthComponent/PageAuth";
 import Browser from "./pages/browser-page/Browser";
-// https://image.tmdb.org/t/p/w500
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,12 +16,19 @@ function App() {
           <Route
             path="/"
             element={
-              <HomePageAuth>
+              <PageAuth>
                 <HomePage />
-              </HomePageAuth>
+              </PageAuth>
             }
           />
-          <Route path="/browse" element={<Browser />} />
+          <Route
+            path="/browse"
+            element={
+              <PageAuth>
+                <Browser />
+              </PageAuth>
+            }
+          />
         </Routes>
       </GenreProvider>
     </BrowserRouter>
