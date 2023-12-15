@@ -6,7 +6,10 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: ["https://super-app-six.vercel.app", "http://localhost:5173"],
+    origin: [
+      "https://super-app-six.vercel.app",
+      "https://super-app-neon-three.vercel.app",
+    ],
   })
 );
 
